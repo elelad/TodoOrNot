@@ -4,8 +4,14 @@ live example: https://elelad-todoornot.appspot.com/
 
 ### Edit project: 
 1. downlaod files
-2. run: npm install
-3. run: npm start
+2. install package using:
+```sh
+$ npm install
+```
+3. run the app:
+```sh
+$npm start
+```
 
 
 
