@@ -1,0 +1,9 @@
+<div class="input-group">
+    <label class="input-group-addon">ToDo: </label>
+    <input id="newTodoInput" class="form-control" #enteredtext (keyup)="finishedTyping($event)" autofocus title="Enter your todo" />
+    <span class="input-group-btn">
+    <div class="btn btn-primary" (click)="addItem(enteredtext)" title="Add">
+        <i class="material-icons">add_circle</i>
+    </div>
+    </span>
+</div>

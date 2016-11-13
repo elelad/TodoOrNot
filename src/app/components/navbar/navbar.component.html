@@ -1,0 +1,18 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand m-b-0" routerLink="/home"><i class="material-icons">timer</i> ToDoOrNot</a>
+    <div class="dropdown navLeft">
+        <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="false" aria-expanded="false">
+            <i class="material-icons">menu</i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" routerLink="/home" routerLinkActive="active">
+                <i class="material-icons smallIcon">home</i> Home</a>
+            <a class="dropdown-item" routerLink="/history" routerLinkActive="active">
+                <i class="material-icons smallIcon">history</i> History</a>
+        </div>
+    </div>
+
+</nav>
+<br><br><br>
+<router-outlet class="top"></router-outlet>

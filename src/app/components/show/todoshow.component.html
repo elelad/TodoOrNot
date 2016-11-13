@@ -1,0 +1,62 @@
+<div [ngClass]="{'container': standAlone}">
+
+<div class="card" [ngClass]="{'todoList': standAlone}">
+    <!--title: {{tTodo.todo}} DueDate: {{tTodo.date}} Priority: {{tTodo.priority}}
+    Details: {{tTodo.details}}-->
+    <br>
+    <div class="container-fluid">
+        <!--<button (click)="newWindow()"><i class="material-icons">open_in_new</i></button>-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5">
+                <div class="input-group">
+                    <label class="input-group-addon">Todo:</label>
+                    <input class="form-control" #todoTitle [(ngModel)]="tTodo.todo" aria-label="todo" disabled
+                           title="Title"/>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7">
+                <div class="input-group">
+                    <label class="input-group-addon">DueDate:</label>
+                    <input class="form-control" #todoDate type="text" [(ngModel)]="tTodo.date" disabled
+                           title="DueDate">
+                    <label class="input-group-addon" [ngSwitch]="tTodo.priority"
+                           [ngClass]="{'text-danger': isHighPriority(),
+                           'text-warning': isMediumPriority(),
+                           'text-success': isLowPriority()}"
+                           id="priorityBtn" title="{{tTodo.priority}} Priority">
+                        <span *ngSwitchCase="'High'">
+                            <i class="material-icons smallIcon">{{priorityIcons[0]}}</i></span>
+                        <span *ngSwitchCase="'Medium'">
+                            <i class="material-icons smallIcon">{{priorityIcons[1]}}</i></span>
+                        <span *ngSwitchCase="'Low'"><i class="material-icons smallIcon">{{priorityIcons[2]}}</i></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-xs-2">Details:</div>
+                    <div class="col-xs-10">
+                                        <textarea class="form-control" #todoDetails [(ngModel)]="tTodo.details"
+                                                  title="Add Details" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf="standAlone">
+            <div class="col-xs-6">
+                <a class="btn btn-primary" routerLink="/home">
+                    <i class="material-icons smallIcon">home</i><span class="hidden-xs-down"> Home</span></a>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#editModal" title="Click to Edit">
+                    <span class="hidden-xs-down"> Edit</span>
+                    <i class="material-icons smallIcon">mode_edit</i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<todo-edit *ngIf="standAlone" [tTodo]="tTodo" [tIndex]="tIndex"></todo-edit>

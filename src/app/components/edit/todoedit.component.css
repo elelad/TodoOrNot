@@ -1,0 +1,131 @@
+
+div [class^="col"], div [class*=" col"]{
+    margin-bottom: 10px;
+}
+
+.modal{
+    position: absolute;
+    top: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+
+}
+
+input[type="date"]{
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 0.85em;
+    display: inline-block;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    margin-top:2%;
+    margin-right: 0;
+    float: left;
+}
+input[type="date"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.editContainer{
+    position: relative;
+    padding: 0;
+}
+
+#closeBtn{
+    color: white;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border: none;
+    line-height: 0.3em;
+    border-radius: 100px;
+    padding: 3px;
+}
+
+.done{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.todoList{
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.todoBtnGroup{
+    width: 100%;
+    padding: 0;
+}
+
+.bg-grey{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+
+.iconBtn{
+    width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.material-icons{
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+}
+.smallIcon{
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+.red{
+    background-color: rgba(255,0,0,0.3);
+}
+.orenge{
+    background-color: rgba(255,100,0,0.3);
+}
+.green{
+    background-color: rgba(100,255,0,0.3);
+}
+
+.list-group-item{
+    margin-top: 2px;
+    padding: 0;
+    border: none;
+}
+
+.glyphicon{
+    padding: 3px;
+}
+
+.card{
+    background-color: rgba(255,255,255,0.9);
+    margin-bottom: 0;
+}
+
+.card-block{
+    position: relative;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.myAlert{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    /*height: 1.2em;*/
+    padding: 3px 15px 3px 15px;
+}
+
+#dropdownMenuButton{
+    padding: 5.5px;
+}

@@ -1,0 +1,104 @@
+
+.done{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.todoList{
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.todoBtnGroup{
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+#todoBtn{
+    /*width: calc(100% - 158px);*/
+    width: calc(100% - 40px);
+    background-color: rgba(0,0,0,0.1);
+    border: rgba(200,200,200,1) thin solid;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 1em;
+    height: 42px;
+}
+#todoBtn:hover, #todoBtn:focus, #todoBtn:active, #todoBtn:checked {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.btnOver{
+    position: absolute; !important;
+    right: 0;
+    top: 0;
+    z-index:99;
+}
+
+#btnGroupMenu{
+    background-color: transparent;
+    top: 30%;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    width: 190px;
+}
+
+.bg-grey{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+.bg-trans{
+    background-color: transparent;
+    color: black;
+}
+
+.iconBtn{
+    width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.material-icons{
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+}
+.smallIcon{
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+.red{
+    background-color: rgba(255,0,0,0.3);
+}
+.orenge{
+    background-color: rgba(255,100,0,0.3);
+}
+.green{
+    background-color: rgba(100,255,0,0.3);
+}
+
+.list-group-item{
+    margin-top: 2px;
+    padding: 0;
+    border: none;
+}
+
+.glyphicon{
+    padding: 3px;
+}
+
+.card{
+    background-color: rgba(255,255,255,0.9);
+    margin-bottom: 0;
+}
+
+.card-block{
+    position: relative;
+}

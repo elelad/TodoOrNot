@@ -1,0 +1,55 @@
+.navLeft{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+}
+
+.navLeft button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 3px;
+}
+.navLeft button:active{
+    background-color: rgba(255,255,255,0.7);
+    color: white;
+    border: none;
+    outline: none;
+}
+.navLeft button:focus{
+    border: none;
+    outline: none;
+}
+
+
+.bg-grey{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+
+.iconBtn{
+    width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.navbar{
+    text-align: left;
+}
+
+.navbar-brand{}
+
+.material-icons{
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+}
+.smallIcon{
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+.glyphicon{
+    padding: 3px;
+}

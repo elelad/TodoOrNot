@@ -1,0 +1,103 @@
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="card todoList">
+                <div class="card-header">Edit Todo</div>
+                <div [@showSaved]="saved" class="alert alert-success myAlert" role="alert">
+                    <i class="material-icons">done</i> <strong>Saved</strong>
+                </div>
+                <div class="card-block">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                <div class="input-group">
+                                    <label class="input-group-addon">Todo:</label>
+                                    <input class="form-control" #todoTitle [(ngModel)]="tTodo.todo" aria-label="todo"
+                                           title="Edit Title"/>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="input-group date">
+                                    <label class="input-group-addon">DueDate:</label>
+                                    <input class="form-control" #todoDate type="text" [(ngModel)]="tTodo.date" id="datepicker"
+                                           title="Edit DueDate">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="dropdownMenuButton" [ngClass]="{'bg-danger': isHighPriority(),
+                           'bg-warning': isMediumPriority(),
+                           'bg-success': isLowPriority()}"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                title="Priority">
+                                            <i class="material-icons smallIcon">{{priorityIcons[priority - 1]}}</i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <h6 class="dropdown-header">Set Priority</h6>
+                                            <button class="dropdown-item bg-danger" (click)="setPriority(1)"
+                                                    title="Set High">
+                                                <i class="material-icons smallIcon">priority_high</i> High
+                                            </button>
+                                            <button class="dropdown-item bg-warning" (click)="setPriority(2)">
+                                                <i class="material-icons smallIcon" title="Set medium">view_list</i>
+                                                Medium
+                                            </button>
+                                            <button class="dropdown-item bg-success" (click)="setPriority(3)"
+                                                    title="Set low">
+                                                <i class="material-icons smallIcon">low_priority</i> Low
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="col-xs-12 col-sm-6 col-md-2">
+                                <div class="dropdown open">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            title="Priority">
+                                        <i class="material-icons smallIcon">{{priorityIcons[priority - 1]}}</i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <h6 class="dropdown-header">Set Priority</h6>
+                                        <button class="dropdown-item bg-danger" (click)="setPriority(1)"
+                                                title="Set High">
+                                            <i class="material-icons smallIcon">priority_high</i> High
+                                        </button>
+                                        <button class="dropdown-item bg-warning" (click)="setPriority(2)">
+                                            <i class="material-icons smallIcon" title="Set medium">view_list</i> Medium
+                                        </button>
+                                        <button class="dropdown-item bg-success" (click)="setPriority(3)"
+                                                title="Set low">
+                                            <i class="material-icons smallIcon">low_priority</i> Low
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-xs-2">Details:</div>
+                                    <div class="col-xs-10">
+                                        <textarea class="form-control" #todoDetails [(ngModel)]="tTodo.details"
+                                                  title="Add Details"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button class="btn btn-info" title="Save Todo"
+                                        (click)="saveTodo(todoTitle.value, todoDate.value, todoDetails.value)">
+                                    <i class="material-icons smallIcon">save</i> Save
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="closeBtn" class="btn btn-danger" data-dismiss="modal" (click)="todoReset()" title="Close">
+            <i class="material-icons">close</i></button>
+    </div>
+</div>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body{
+    text-align: center;
+    background-image: url("../images/bridge.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+.opa{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200,200,200,0.7);
+}
+
+
+.navbar-fixed-top{
+}
+.navLeft{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+}
+
+.navLeft button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 3px;
+}
+.navLeft button:active{
+    background-color: rgba(255,255,255,0.7);
+    color: white;
+    border: none;
+    outline: none;
+}
+.navLeft button:focus{
+    border: none;
+    outline: none;
+}
+
+#loading{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    background: black;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+div [class^="col"], div [class*=" col"]{
+    margin-bottom: 10px;
+}
+
+
+.editContainer{
+    position: relative;
+}
+
+#closeBtn{
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    border-radius: 50px;
+    padding: 3px;
+}
+
+/*ul{
+!*    position: relative;
+    left: 50%;
+    transform: translate(-50%);*!
+    list-style-type: none;
+}*/
+
+/*
+li{
+    color: blue;
+}
+*/
+
+input[type="date"]{
+    font-size: 0.85em;
+}
+
+.done{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.todoList{
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.todoBtnGroup{
+    width: 100%;
+    padding: 0;
+}
+
+#todoBtn{
+    width: calc(100% - 118px);
+    background-color: rgba(230,230,230,1);
+    border: rgba(200,200,200,1) thin solid;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#todoHistoryBtn{
+    width: calc(100% - 78px);
+    background-color: rgba(230,230,230,1);
+    border: rgba(200,200,200,1) thin solid;
+    text-align: left;
+}
+
+
+.bg-grey{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+}
+
+.iconBtn{
+    width: 40px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.navbar{
+    text-align: left;
+}
+
+.navbar-brand{}
+
+.material-icons{
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0;
+}
+.smallIcon{
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+.red{
+    background-color: rgba(255,0,0,0.3);
+}
+.orenge{
+    background-color: rgba(255,100,0,0.3);
+}
+.green{
+    background-color: rgba(100,255,0,0.3);
+}
+
+.list-group-item{
+    margin-top: 2px;
+    padding: 0;
+    border: none;
+}
+
+.glyphicon{
+    padding: 3px;
+}
+
+@media screen and (max-width: 400px){
+
+}
+
+.card{
+    background-color: rgba(255,255,255,0.9);
+    margin-bottom: 0;
+}
+
+.card-block{
+    position: relative;
+}
+
+.myAlert{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    /*height: 1.2em;*/
+    padding: 3px 15px 3px 15px;
+}

@@ -1,0 +1,57 @@
+<div class="container">
+    <br>
+    <div class="card todoList">
+        <div class="card-header">
+            <h6>Todo List <span class="tag tag-primary">{{items.length}}</span></h6>
+        </div>
+        <ul class="list-group ">
+            <li class="list-group-item">
+                <new-todo></new-todo>
+            </li>
+            <li *ngFor="let item of items; let i = index" class="list-group-item">
+                <div class="btn-group todoBtnGroup" role="group" data-toggle="buttons">
+                    <button class="btn btn-success iconBtn" (click)="markAsDone(item)" title="Mark as Done">
+                        <i class="material-icons">done</i></button>
+                    <button id="todoBtn" class="btn btn-secondary" aria-expanded="false" (click)="doBlur($event)"
+                            data-toggle="collapse" [attr.data-target]="'#item' + i" title="Show details">
+                        <span [class.done]="item.getDone()"><strong>{{item.todo}}</strong></span>
+                    </button>
+                </div>
+                <div class="collapse" [id]="'item'+ i" style="margin-bottom: 0">
+                    <!--<button (click)="newWindow(i)"><i class="material-icons">open_in_new</i></button>-->
+                    <todo-show [tTodo]="item" [tIndex]="i"></todo-show>
+                </div>
+                <div class="btnOver">
+                    <div class="btn-group hidden-xs-down">
+                        <button class="btn btn-info iconBtn" (click)="newWindow(i)">
+                            <i class="material-icons">open_in_new</i></button>
+                        <button class="btn btn-warning iconBtn" (click)="setTodoToEdit(i)"
+                                data-toggle="modal" data-target="#editModal" title="Click to Edit">
+                            <i class="material-icons">mode_edit</i></button>
+                        <button class="btn btn-danger iconBtn" (click)="remove(i)" title="Delete Todo">
+                            <i class="material-icons">delete</i></button>
+                    </div>
+                    <div class="dropdown hidden-sm-up">
+                        <button class="btn bg-trans iconBtn"
+                                data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                            <i class="material-icons">more_vert</i></button>
+                        <div class="dropdown-menu dropdown-menu-right pull-left" id="btnGroupMenu"
+                             aria-labelledby="dropdownMenuButton">
+                            <div class="btn-group dropdown-item">
+                                <button class="btn btn-info iconBtn" (click)="newWindow(i)">
+                                    <i class="material-icons">open_in_new</i></button>
+                                <button class="btn btn-warning iconBtn" (click)="setTodoToEdit(i)"
+                                        data-toggle="modal" data-target="#editModal" title="Click to Edit">
+                                    <i class="material-icons">mode_edit</i></button>
+                                <button class="btn btn-danger iconBtn" (click)="remove(i)" title="Delete Todo">
+                                    <i class="material-icons">delete</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <todo-edit *ngIf="selectesdTodo" [tTodo]="selectesdTodo" [tIndex]="todoIndex"></todo-edit>
+</div>
