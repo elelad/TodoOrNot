@@ -3,12 +3,12 @@
 live example: https://elelad-todoornot.appspot.com/
 
 ### Edit project: 
-1. downlaod files
-2. install package using:
+* downlaod files
+* install package using:
 ```sh
 $ npm install
 ```
-3. run the app:
+* run the app:
 ```sh
 $npm start
 ```
@@ -16,7 +16,7 @@ $npm start
 
 
 
-#### Build:
+#### Build prodaction:
 1. npm run build
 2. in file dist/index.html: put in comment jquery and tether.
 3. change: "../public/images/timer.png" to "/../assets/timer.png"
